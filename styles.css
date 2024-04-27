@@ -87,6 +87,10 @@ body {
 	background: linear-gradient(to right, red, rgb(162, 0, 255));
 }
 
+#socials .container h1:hover {
+	filter: brightness(80%);
+}
+
 .socials-a {
 	background: linear-gradient(
 		45deg,
@@ -96,4 +100,43 @@ body {
 	);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.socials-a:hover {
+	filter: brightness(50%);
+}
+
+#contact .container h1::after {
+	content: "";
+	position: absolute;
+	left: -10px;
+	right: -10px;
+	bottom: -0.8vh;
+	height: 0.4vh;
+	background: linear-gradient(to right, red, rgb(162, 0, 255));
+}
+
+.contact-text {
+	background: linear-gradient(
+		45deg,
+		rgb(213, 0, 74),
+		rgb(130, 0, 124),
+		rgb(85, 0, 255)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.gradient-border {
+	padding: 0.25em;
+	background: linear-gradient(45deg, red, blue);
+	position: relative;
+	overflow: hidden;
+}
+
+#loading {
+	position: absolute;
+	width: 5vw;
+	height: auto;
+	align-items: center;
 }
