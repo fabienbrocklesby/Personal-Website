@@ -47,6 +47,13 @@ body {
 		transform 0.5s ease-in-out;
 }
 
+@media (min-width: 768px) {
+  .nav-item:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
 .nav-item.active::after {
 	opacity: 1;
 	transform: scaleX(1);

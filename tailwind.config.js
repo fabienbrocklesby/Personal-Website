@@ -6,6 +6,9 @@ module.exports = {
 			colors: {
 				background: "#0f172a",
 			},
+			screens: {
+				betterhover: { raw: "(hover: hover)" },
+			},
 		},
 	},
 	plugins: [],
