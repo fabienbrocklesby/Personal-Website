@@ -4,7 +4,7 @@ function setActiveClass() {
 
 	sections.forEach((section, index) => {
 		let rect = section.getBoundingClientRect();
-		if (rect.top <= 0 && rect.bottom >= 0) {
+		if (rect.top < window.innerHeight * 0.7 && rect.bottom > 0) {
 			navLinks.forEach((nav) => nav.classList.remove("active"));
 			navLinks[index].classList.add("active");
 		}
