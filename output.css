@@ -928,6 +928,10 @@ video {
   height: 100%;
 }
 
+.h-64 {
+  height: 16rem;
+}
+
 .w-1 {
   width: 0.25rem;
 }
@@ -3237,6 +3241,10 @@ video {
 
   .md\:ml-auto {
     margin-left: auto;
+  }
+
+  .md\:h-full {
+    height: 100%;
   }
 
   .md\:w-1\/2 {
