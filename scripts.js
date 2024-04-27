@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
+	if (window.location.hash) {
+		let target = document.querySelector(window.location.hash);
+		window.scrollTo({
+			top: target.offsetTop - window.innerHeight / 2 + target.offsetHeight / 2,
+			behavior: "smooth",
+		});
+	} else {
+		window.scrollTo(0, 0);
+	}
+
 	AOS.init({
 		startEvent: "DOMContentLoaded",
 		duration: 1500,
