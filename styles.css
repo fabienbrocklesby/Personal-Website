@@ -11,6 +11,22 @@ body {
 	padding: 0;
 }
 
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	animation: slideDown 0.5s ease-out;
+}
+
 .nav-item {
 	position: relative;
 }
@@ -25,11 +41,35 @@ body {
 	border-radius: 100em;
 	background: linear-gradient(90deg, #ec7a40, #c26881 50%, #a231bb);
 	opacity: 0;
-	transition: opacity 0.5s ease-in-out;
+	transform: scaleX(0);
+	transition:
+		opacity 0.5s ease-in-out,
+		transform 0.5s ease-in-out;
 }
 
 .nav-item.active::after {
 	opacity: 1;
+	transform: scaleX(1);
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInLeftToRight {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 .landing {
@@ -49,12 +89,18 @@ body {
 	font-weight: 800;
 	font-style: normal;
 	color: #ffffff;
+	animation: fadeIn 2s ease-in-out;
 }
 
 .landing-gradient-text {
 	background: linear-gradient(90deg, #ec7a40, #c26881 50%, #a231bb);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	animation: fadeInLeftToRight 1s ease-out;
+}
+
+#about {
+	animation: fadeIn 2s ease-in-out;
 }
 
 #socials .container h1 {
