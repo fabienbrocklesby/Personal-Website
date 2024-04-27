@@ -940,6 +940,10 @@ video {
   height: 20rem;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .w-1 {
   width: 0.25rem;
 }
@@ -3259,6 +3263,10 @@ video {
     margin-left: auto;
   }
 
+  .md\:flex {
+    display: flex;
+  }
+
   .md\:h-full {
     height: 100%;
   }
@@ -3275,8 +3283,16 @@ video {
     flex-direction: row;
   }
 
+  .md\:flex-col {
+    flex-direction: column;
+  }
+
   .md\:items-center {
     align-items: center;
+  }
+
+  .md\:justify-center {
+    justify-content: center;
   }
 
   .md\:justify-between {

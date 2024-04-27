@@ -10,8 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	AOS.init({
-		startEvent: "DOMContentLoaded",
-		duration: 1500,
+		duration: 2000,
+		offset: 0,
+		mirror: true,
 	});
 
 	function setActiveClass() {

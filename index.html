@@ -12,8 +12,8 @@
 			crossorigin="anonymous"
 		></script>
 
-		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	</head>
 	<body>
 		<nav
@@ -46,6 +46,9 @@
 		<header
 			id="landing"
 			class="landing flex items-center justify-center h-screen text-center p-4"
+			data-aos="fade-in"
+			data-aos-duration="6000"
+			data-aos-mirror="true"
 		>
 			<div class="container mx-auto max-w-3xl">
 				<h1 class="text-5xl">
@@ -76,13 +79,17 @@
 		<section
 			id="about"
 			class="container mx-auto mb-6 px-6 py-16 rounded-2xl flex flex-col md:flex-row md:space-x-8 bg-white mt-[-50px]"
+			data-aos="fade-in"
+			data-aos-duration="4000"
+			data-aos-offset="0"
+			data-aos-mirror="true"
 		>
 			<div class="flex-grow md:w-1/2">
-				<div class="flex justify-center">
+				<div class="w-full h-80 md:h-full overflow-hidden">
 					<img
 						src="assets/me.jpg"
 						alt="Fabien Brocklesby"
-						class="rounded-lg mb-4 shadow-md object-cover md:h-full h-80 md:w-auto w-5/6"
+						class="rounded-lg shadow-md object-cover h-full w-full"
 					/>
 				</div>
 			</div>
