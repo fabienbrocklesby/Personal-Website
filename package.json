@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "lite-server"
+    "start": "lite-server",
+"build": "tailwindcss build input.css -o output.css --watch"
   },
   "devDependencies": {
     "lite-server": "^2.6.1",

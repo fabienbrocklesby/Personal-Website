@@ -15,20 +15,36 @@ document.addEventListener("DOMContentLoaded", function () {
 		mirror: true,
 	});
 
+	if ("serviceWorker" in navigator) {
+		window.addEventListener("load", function () {
+			navigator.serviceWorker.register("/service-worker.js").then(
+				function (registration) {
+					console.log(
+						"ServiceWorker registration successful with scope: ",
+						registration.scope
+					);
+				},
+				function (err) {
+					console.log("ServiceWorker registration failed: ", err);
+				}
+			);
+		});
+	}
+
 	function setActiveClass() {
 		let navLinks = document.querySelectorAll("nav ul li");
 		let sections = document.querySelectorAll("header, section");
 
 		sections.forEach((section, index) => {
-    let rect = section.getBoundingClientRect();
-    if (rect.top >= 0 && rect.top < window.innerHeight * 0.6) {
-        navLinks.forEach((nav) => nav.classList.remove("active"));
-        navLinks[index].classList.add("active");
+			let rect = section.getBoundingClientRect();
+			if (rect.top >= 0 && rect.top < window.innerHeight * 0.6) {
+				navLinks.forEach((nav) => nav.classList.remove("active"));
+				navLinks[index].classList.add("active");
 
-        let id = section.getAttribute("id");
-        history.pushState(null, null, "#" + id);
-    }
-});
+				let id = section.getAttribute("id");
+				history.pushState(null, null, "#" + id);
+			}
+		});
 	}
 
 	setActiveClass();
@@ -40,20 +56,21 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	document.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", function (e) {
-        e.preventDefault();
-        let target = document.querySelector(this.getAttribute("href"));
-        if (this.getAttribute("href") === "#landing") {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            });
-        } else {
-            window.scrollTo({
-                top: target.offsetTop - window.innerHeight / 2 + target.offsetHeight / 2,
-                behavior: "smooth",
-            });
-        }
-    });
-});
+		a.addEventListener("click", function (e) {
+			e.preventDefault();
+			let target = document.querySelector(this.getAttribute("href"));
+			if (this.getAttribute("href") === "#landing") {
+				window.scrollTo({
+					top: 0,
+					behavior: "smooth",
+				});
+			} else {
+				window.scrollTo({
+					top:
+						target.offsetTop - window.innerHeight / 2 + target.offsetHeight / 2,
+					behavior: "smooth",
+				});
+			}
+		});
+	});
 });
