@@ -31,6 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
+	document.getElementById("email-link").href =
+		"mailto:contact@fabienbrocklesby.com";
+	document.getElementById("phone-link").href = "tel:+642041908000";
+
 	function setActiveClass() {
 		let navLinks = document.querySelectorAll("nav ul li");
 		let sections = document.querySelectorAll("header, section");
@@ -57,14 +61,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	document.querySelectorAll("a").forEach((a) => {
 		a.addEventListener("click", function (e) {
+			let href = this.getAttribute("href");
+
+			if (href.startsWith("mailto:") || href.startsWith("tel:")) {
+				return;
+			}
+
 			e.preventDefault();
-			let target = document.querySelector(this.getAttribute("href"));
-			if (this.getAttribute("href") === "#landing") {
+			let target = document.querySelector(href);
+			if (href === "#landing") {
 				window.scrollTo({
 					top: 0,
 					behavior: "smooth",
 				});
-			} else if (this.getAttribute("href") === "#about") {
+			} else if (href === "#about") {
 				setTimeout(() => {
 					window.scrollTo({
 						top: target.offsetTop - 50,
