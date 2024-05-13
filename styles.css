@@ -42,16 +42,14 @@ body {
 	background: linear-gradient(90deg, #ec7a40, #c26881 50%, #a231bb);
 	opacity: 0;
 	transform: scaleX(0);
-	transition:
-		opacity 0.5s ease-in-out,
-		transform 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 @media (min-width: 768px) {
-  .nav-item:hover::after {
-    opacity: 1;
-    transform: scaleX(1);
-  }
+	.nav-item:hover::after {
+		opacity: 1;
+		transform: scaleX(1);
+	}
 }
 
 .nav-item.active::after {
@@ -80,18 +78,8 @@ body {
 }
 
 .landing {
-	font-family:
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		Roboto,
-		Oxygen,
-		Ubuntu,
-		Cantarell,
-		"Open Sans",
-		"Helvetica Neue",
-		sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 	letter-spacing: 0.05em;
 	font-weight: 800;
 	font-style: normal;
@@ -111,18 +99,8 @@ body {
 } */
 
 #socials .container h1 {
-	font-family:
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		Roboto,
-		Oxygen,
-		Ubuntu,
-		Cantarell,
-		"Open Sans",
-		"Helvetica Neue",
-		sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 	letter-spacing: 0.05em;
 	font-weight: 800;
 	font-style: normal;

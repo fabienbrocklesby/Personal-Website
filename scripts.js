@@ -64,6 +64,13 @@ document.addEventListener("DOMContentLoaded", function () {
 					top: 0,
 					behavior: "smooth",
 				});
+			} else if (this.getAttribute("href") === "#about") {
+				setTimeout(() => {
+					window.scrollTo({
+						top: target.offsetTop - 50,
+						behavior: "smooth",
+					});
+				}, 0);
 			} else {
 				window.scrollTo({
 					top:
