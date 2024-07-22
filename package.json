@@ -4,7 +4,11 @@
     "build": "tailwindcss build -i input.css -o output.css --watch"
   },
   "devDependencies": {
+    "daisyui": "^4.12.10",
     "lite-server": "^2.6.1",
     "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.7"
   }
 }
