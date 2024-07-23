@@ -1,0 +1,82 @@
+<section id="contact"
+  class="contact container mx-auto px-6 py-16 items-center justify-center bg-white mt-24 mb-6 rounded-2xl"
+  data-aos="fade-in" data-aos-duration="1500">
+  <div class="flex flex-col md:flex-row md:space-x-16">
+    <div class="flex-grow md:w-1/2 text-center md:text-left">
+      <h1 class="text-3xl font-bold gradient-text">Get in Touch</h1>
+      <p class="text-gray-700 text-lg leading-loose mt-4">
+        Based in Nelson, New Zealand
+      </p>
+    </div>
+    <div class="flex-grow md:w-1/2">
+      <div class="bg-slate-100 mt-6 md:mt-0 shadow-lg shadow-gray-300 rounded-lg px-8 py-4">
+        <div class="flex overflow-x-hidden items-center mb-4">
+          <span class="material-icons text-gray-500 text-lg mr-2">email</span>
+          <a id="email-link" class="text-gray-700 hover:text-indigo-600">contact@fabienbrocklesby.com</a>
+        </div>
+        <div class="flex items-center">
+          <span class="material-icons text-gray-500 text-lg mr-2">phone</span>
+          <a id="phone-link" class="text-gray-700 hover:text-indigo-600">&#43;64 &#50;&#48;&#52; &#49;&#57;&#48;
+            &#56;&#48;&#48;&#48;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="my-8 rounded-lg py-12 px-8 bg-slate-100 shadow-lg shadow-gray-300">
+    <form id="contact-form">
+      <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+        <div>
+          <label for="firstName" class="block text-sm font-semibold leading-6 gradient-text">First name</label>
+          <div class="mt-2.5">
+            <input type="text" name="firstName" id="first-name" autocomplete="given-name"
+              class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+        <div>
+          <label for="lastName" class="block text-sm font-semibold leading-6 gradient-text">Last name</label>
+          <div class="mt-2.5">
+            <input type="text" name="lastName" id="last-name" autocomplete="family-name"
+              class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="email" class="block text-sm font-semibold leading-6 gradient-text">Email</label>
+          <div class="mt-2.5">
+            <input type="email" name="email" id="email" autocomplete="email"
+              class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="message" class="block text-sm font-semibold leading-6 gradient-text">Message</label>
+          <div class="mt-2.5">
+            <textarea name="message" id="message" rows="4"
+              class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10">
+        <div class="w-full rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1">
+          <button type="submit"
+            class="bg-slate-100 rounded-lg text-red-500 w-full py-2 hover:bg-transparent hover:text-slate-100 transition duration-300 ease-in-out">
+            Let's talk
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <div class="w-full mt-8">
+    <div id="gradient-border" class="gradient-border rounded-xl relative flex items-center justify-center">
+      <div id="loading" class="absolute w-full h-full flex items-center justify-center">
+        <img src="assets/loading-spinner.gif" alt="Loading..." />
+      </div>
+      <iframe id="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191841.77602335473!2d173.1478600064222!3d-41.29738138657046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d3becc491b72e7d%3A0xa00ef88e796a480!2sNelson!5e0!3m2!1sen!2snz!4v1714204434176!5m2!1sen!2snz"
+        width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        class="w-full rounded-xl shadow-lg"
+        onload="document.getElementById('loading').style.display = 'none';"></iframe>
+    </div>
+  </div>
+</section>

@@ -12,9 +12,6 @@ dist/
 .cache/
 .log/
 
-# Ignore generated HTML files
-*.html
-
 # Ignore image thumbnails
 *.thumb/
 
