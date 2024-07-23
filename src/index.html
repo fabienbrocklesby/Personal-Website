@@ -1,15 +1,45 @@
----
-layout: defaultLayout.html
----
+<!DOCTYPE html>
+<html lang="en">
 
-{{> navbar }}
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#1f2937" />
 
-{{> hero }}
+	<link rel="icon" href="/assets/favicon/favicon.png" />
+	<meta name="msapplication-TileColor" content="#1f2937" />
+	<meta name="theme-color" content="#ffffff" />
 
-{{> about }}
+	<title>Fabien Brocklesby</title>
 
-{{> socials }}
+	<link href="./assets/css/output.css" rel="stylesheet" />
+	<link rel="stylesheet" href="./assets/css/styles.css" />
+	<link rel="manifest" href="/manifest.json" />
+</head>
 
-{{> contact }}
+<body>
+	{{> navbar }}
 
-{{> footer }}
+	{{> hero }}
+
+	{{> about }}
+
+	{{> pricing }}
+
+	{{> socials }}
+
+	{{> contact }}
+
+	{{> footer }}
+	</main>
+	<script src="./assets/js/contactForm.js"></script>
+	<script src="./assets/js/scripts.js" defer></script>
+
+
+	<script src="https://kit.fontawesome.com/d1c56b39df.js" crossorigin="anonymous"></script>
+
+	<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</body>
+
+</html>

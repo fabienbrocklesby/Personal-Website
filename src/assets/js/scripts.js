@@ -91,3 +91,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 });
+
+document.querySelectorAll("#aboutDropdown a").forEach((item) => {
+	item.addEventListener("click", () => {
+		document.querySelector("#aboutDropdown").open = false;
+	});
+});
